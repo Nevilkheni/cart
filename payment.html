@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="css/payment.css">
+</head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="tabs">
+                <button class="tablinks active" onclick="openTab(event, 'Payment')">Payment</button>
+            </div>
+
+            <div id="Payment" class="tabcontent" style="display: block;">
+                <h3>Saved cards:</h3>
+                <div class="saved-card">
+                    <div class="card-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png"
+                            alt="Mastercard">
+                    </div>
+                    <p>**** **** **** 3193</p>
+                    <button class="remove-card-btn">Remove card</button>
+                </div>
+                <div class="saved-card">
+                    <div class="card-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa">
+                    </div>
+                    <p>**** **** **** 4296</p>
+                    <button class="remove-card-btn">Remove card</button>
+                </div>
+
+                <h3>Add new card:</h3>
+                <form id="card-form">
+                    <div class="form-group">
+                        <label for="amount">Amount</label>
+                        <input type="text" id="amount" name="amount" inputmode="numeric" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardholder-name">Card holder name</label>
+                        <input type="text" id="cardholder-name" name="cardholder-name" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-number">Card number</label>
+                        <input type="text" id="card-number" name="card-number" placeholder="0000 0000 0000 0000"
+                        required maxlength="16" pattern="\d{16}" title="Card number must be exactly 16 digits"
+                        inputmode="numeric" oninput="this.value = this.value.replace(/\D/g, '').slice(0, 16);">
+                    
+                    </div>
+                    <div class="form-group inline">
+                        <label for="exp-date">Exp. date</label>
+                        <input type="text" id="exp-date" name="exp-date" placeholder="MM/YY" required
+                        pattern="^(0[1-9]|1[0-2])[\/\-]\d{2}$" title="Enter a valid expiration date in MM/YY or MM-YY format"
+                        inputmode="numeric" maxlength="5" oninput="formatExpDate(this);">
+                    
+                    </div>
+                    <div class="form-group inline">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="000" required maxlength="3" pattern="\d{3}"
+                            title="CVV must be exactly 3 digits" inputmode="numeric">
+                    </div>
+                    <a href="./invoice.html"><button type="submit" class="add-card-btn">Pay Now</button> </a>
+                </form>
+
+                <a href="cart.html"><button class="back">← Back</button></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/payment.js"> </script>
+
+
+</body>
+
+</html>

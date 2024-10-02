@@ -1,0 +1,74 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+    text-align: center;
+}
+
+table {
+    width: auto;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+img {
+    width: 100px;
+    height: auto;
+}
+
+.total {
+    text-align:center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    /* margin: auto; */
+}
+
+.action-buttons button {
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+}
+
+.edit-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+.back{
+    margin-top: 20px;
+    background-color: #ff0000;
+    color: rgb(255, 255, 255);
+    padding: 5px 20px;
+    border: none;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    border: 3px solid #000;
+    
+}
+
