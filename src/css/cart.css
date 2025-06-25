@@ -1,0 +1,98 @@
+.cart-container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.cart-img {
+  width: 80px;
+  height: 60px;
+}
+
+.qty-btn {
+  padding: 5px 10px;
+  margin: 2px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+.qty-btn:hover {
+  background-color: #0056b3;
+}
+
+.qty {
+  padding: 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.remove-btn {
+  padding: 5px 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.remove-btn:hover {
+  background-color: #cc0000;
+}
+
+.pay-now {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.pay-now:hover {
+  background-color: #218838;
+}
+
+.back {
+  padding: 10px 15px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.back:hover {
+  background-color: #5a6268;
+}
+
+@media screen and (max-width: 600px) {
+  .cart-container {
+    width: 95%;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  .qty-btn {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,38 @@
+.invoice-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.back-btn {
+    width: 100%;
+    background-color: #28a745;
+    font-size: 15px;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background-color: #218838;
+}
