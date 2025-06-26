@@ -1,4 +1,8 @@
+
+import visaImg from "../assets/visa.png";
+import cardImg from "../assets/card.png";
+
 export const cardLogos = {
-  visa: "visa.png",
-  card: "visa.png",
+  visa: visaImg,
+  card: cardImg,
 };

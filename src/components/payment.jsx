@@ -1,8 +1,7 @@
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/payment.css";
-import { cardLogos } from "./logos"; 
+import { cardLogos } from "./logos";
 
 const Payment = () => {
   const navigate = useNavigate();
@@ -33,14 +32,18 @@ const Payment = () => {
   };
 
   return (
-    <div className=" payment-container">
+    <div className="payment-container">
       <div className="payment-card">
         <h2>Payment</h2>
 
         <h3>Saved Cards</h3>
         {savedCards.map((card) => (
-          <div key={card.id} className={`saved-card ${selectedCard?.id === card.id ? "selected" : ""}`} onClick={() => setSelectedCard(card)}>
-            <img src={`/images/${card.logo}`} alt="Card Logo" />
+          <div
+            key={card.id}
+            className={`saved-card ${selectedCard?.id === card.id ? "selected" : ""}`}
+            onClick={() => setSelectedCard(card)}
+          >
+            <img src={card.logo} alt="Card Logo" />
             <div>
               <p><strong>{card.name}</strong></p>
               <p>{card.number} | Exp: {card.exp}</p>
@@ -66,7 +69,9 @@ const Payment = () => {
             <input
               type="text"
               value={cardNumber}
-              onChange={(e) => setCardNumber(e.target.value.replace(/\D/g, "").slice(0, 16))}
+              onChange={(e) =>
+                setCardNumber(e.target.value.replace(/\D/g, "").slice(0, 16))
+              }
               placeholder="0000 0000 0000 0000"
               disabled={!!selectedCard}
             />
@@ -78,7 +83,9 @@ const Payment = () => {
               <input
                 type="text"
                 value={expDate}
-                onChange={(e) => setExpDate(e.target.value.replace(/[^0-9/]/g, "").slice(0, 5))}
+                onChange={(e) =>
+                  setExpDate(e.target.value.replace(/[^0-9/]/g, "").slice(0, 5))
+                }
                 placeholder="MM/YY"
                 disabled={!!selectedCard}
               />
@@ -89,7 +96,9 @@ const Payment = () => {
               <input
                 type="text"
                 value={cvv}
-                onChange={(e) => setCvv(e.target.value.replace(/\D/g, "").slice(0, 3))}
+                onChange={(e) =>
+                  setCvv(e.target.value.replace(/\D/g, "").slice(0, 3))
+                }
                 placeholder="123"
                 disabled={!!selectedCard}
               />
